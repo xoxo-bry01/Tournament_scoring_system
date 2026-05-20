@@ -47,11 +47,50 @@ while running:
             print(f"{team_name} added successfully!")
 
     elif choice == "2":
-        print("Add Individual selected")
+        #get indiviidual competitors name
+        individual_name= input("enter competitors name:")
 
+        #store competitors information
+        individuals[individual_name]={
+            "scores":[0, 0, 0, 0, 0],
+            "totals":0
+        }
+
+        print(f"{individual_name} added successfully")
+
+        
     elif choice == "3":
-        print("Add One Event Entry selected")
+       #List od avaliable events 
+       events =[
+           "Football",
+           "Quiz",
+           "Relay race",
+           "chess",
+           "Dodge Ball"
 
+       ]
+       #Get a competitor name
+       entry_name= input("Enter competitor Name:")
+       #show event list
+       print("\n Avalaible Events:")
+
+       for i in range (len(events)):
+           print(f"{i+1}. {events[i]}")
+
+       #choose event    
+       event_choice= int(input("Choose one event(1-5):  "))
+
+       #store entry
+       choosen_event= events[event_choice - 1]
+
+       one_event_entries[entry_name] = {
+           "event": choosen_event,
+           "score":0
+       }
+       print(f"{entry_name} registered for {choosen_event}!")
+
+
+       
     elif choice == "4":
         print("Enter Scores selected")
 
