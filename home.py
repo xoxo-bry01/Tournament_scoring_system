@@ -92,7 +92,56 @@ while running:
 
        
     elif choice == "4":
-        print("Enter Scores selected")
+        #Events Lists
+        events = [
+            "Football",
+            "Quiz",
+            "Relay Race",
+            "Chess",
+            "Dodgeball"
+
+        ]
+
+        #Display Events
+        print("\nEvents:")
+
+        for i in range(len(events)):
+            print(f"{i+1} . {events[i]}")
+
+        #Choose event
+        event_choice = int(input("Selelect Event (1-5):"))
+
+        #Get score index 
+        event_index = event_choice - 1
+
+        #Enter scores for teams 
+        print("\nEnter Team Scores ")
+
+        for team in teams :
+
+            score = int(input(f"Enter Score for {team}: "))
+
+            #Store score 
+            teams [team]["scores"][event_index] = score
+
+            #Update total score
+            teams[team]["total"] = sum(teams[team]["scores"])
+
+        #Enter scores for individuals
+        print("\nEnter Individual Scores")
+
+        for person in individuals:
+
+            score = int(input(f"Enter score for {person}: "))
+
+            #Store score
+            individuals[person]["scores"][event_index] = score
+
+            #Update total score 
+            individuals[person]["total"] = sum(individuals[person]["scores"])
+
+        print("scores Updated successfully!")        
+            
 
     elif choice == "5":
         print("View Rankings selected")
