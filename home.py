@@ -144,7 +144,33 @@ while running:
             
 
     elif choice == "5":
-        print("View Rankings selected")
+        
+        print("\n====== TEAM RANKINGS ======")
+
+        #Display team rankings
+        for team in teams:
+            print(f"\nTeam: {team}")
+            print(f"Members: {teams[team]["members"]}")
+            print(f"Scores: {teams[team]["scores"]}")
+            print(f"Total Points: {teams[team]["total"]}")
+
+        print("\n====== INDIVIDUAL RANKINGS ======")
+
+        #Display individual rankings
+        for person in individuals:
+
+            print(f"\nCompetitor: {person}")
+            print(f"Scores: {individuals[person]["scores"]}")
+            print(f"Total Points: {individuals[person]["total"]}")
+
+        print("\n====== ONE EVENT ENTRIES ======")
+
+        #Display one-event entries
+        for entry in one_event_entries:
+            print(f"\nCompetitor: {entry}")
+            print(f"Event: {one_event_entries[entry]["event"]}")
+            print(f"Score: {one_event_entries[entry]["score"]}")
+                     
 
     elif choice == "6":
         print("Save Results selected")
