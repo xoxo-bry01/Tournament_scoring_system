@@ -173,7 +173,43 @@ while running:
                      
 
     elif choice == "6":
-        print("Save Results selected")
+       
+
+       # Open file
+       file = open("tournament_results.txt", "w")
+
+       # Write team rankings
+       file.write("===== TEAM RANKINGS =====\n")
+
+       for team in teams:
+
+            file.write(f"\nTeam: {team}\n")
+            file.write(f"Members: {teams[team]['members']}\n")
+            file.write(f"Scores: {teams[team]['scores']}\n")
+            file.write(f"Total Points: {teams[team]['total']}\n")
+
+        # Write individual rankings
+       file.write("\n===== INDIVIDUAL RANKINGS =====\n")
+
+       for person in individuals:
+
+            file.write(f"\nCompetitor: {person}\n")
+            file.write(f"Scores: {individuals[person]['scores']}\n")
+            file.write(f"Total Points: {individuals[person]['total']}\n")
+
+       # Write one-event entries
+       file.write("\n===== ONE EVENT ENTRIES =====\n")
+
+       for entry in one_event_entries:
+
+            file.write(f"\nCompetitor: {entry}\n")
+            file.write(f"Event: {one_event_entries[entry]['event']}\n")
+            file.write(f"Score: {one_event_entries[entry]['score']}\n")
+
+       # Close file
+       file.close()
+
+       print("Results saved successfully!")
 
     elif choice == "7":
         print("Program closed")

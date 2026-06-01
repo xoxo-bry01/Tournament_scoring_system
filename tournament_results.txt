@@ -1,0 +1,31 @@
+===== TEAM RANKINGS =====
+
+Team: rivals
+Members: ['south', 'west', 'north', 'east', 'pole']
+Scores: [10, 17, 19, 1, 30, 0]
+Total Points: 77
+
+Team: colours
+Members: ['red', 'blue', 'pink', 'orage', 'yellow']
+Scores: [9, 4, 36, 2, 13, 0]
+Total Points: 64
+
+===== INDIVIDUAL RANKINGS =====
+
+Competitor: Brenton
+Scores: [8, 26, 40, 3, 27]
+Total Points: 104
+
+Competitor: Stacey
+Scores: [7, 18, 26, 4, 3]
+Total Points: 58
+
+===== ONE EVENT ENTRIES =====
+
+Competitor: Spinach
+Event: Football
+Score: 0
+
+Competitor: Etoile
+Event: Quiz
+Score: 0
