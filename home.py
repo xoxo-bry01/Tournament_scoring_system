@@ -11,6 +11,7 @@ running = True
 
 print("===================================")
 print(" TOURNAMENT SCORING SYSTEM ")
+print(" Developed for College Tournament ")
 print("===================================")
 
 while running:
@@ -212,6 +213,7 @@ while running:
        print("Results saved successfully!")
 
     elif choice == "7":
+        print("Thank you for using the Tournament Scoring System")
         print("Program closed")
         running = False
 
